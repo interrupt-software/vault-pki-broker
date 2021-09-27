@@ -12,3 +12,6 @@
 # The `secret store` files in this repo
 .app_role_creds
 .wrapped_token
+
+# Local logging for testing
+server.log
