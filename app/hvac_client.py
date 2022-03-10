@@ -16,7 +16,7 @@ client = hvac.Client(
 
 generate_certificate_response = client.secrets.pki.generate_certificate(
    name='hashicat-int-role',
-   common_name='app1.dev.hashicat.com',
+   common_name='app1.dev.hashicat.io',
    mount_point='hashicat-ca-intermediate'
 )
 

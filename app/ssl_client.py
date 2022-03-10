@@ -4,7 +4,7 @@ import socket
 import ssl
 
 server_address = ('0.0.0.0', 10443)
-server_sni_hostname = 'app1.dev.interrupt.com'
+server_sni_hostname = 'app1.dev.hashicat.io'
 client_cert = 'client.crt'
 client_key  = 'client.key'
 client_certs = 'ca_bundle.crt'
