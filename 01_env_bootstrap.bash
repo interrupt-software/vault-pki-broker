@@ -15,8 +15,8 @@ export RootCAName="${RootName}-ca-root"
 export CARoleName="${RootName}-ca-role"
 
 export InterimCAName="${RootName}-ca-intermediate"
-export IntCA_ttl="60m"
-export Cert_ttl="5m"
+export IntCA_ttl="12h"
+export Cert_ttl="8h"
 export IntRoleName="${RootName}-int-role"
 
 # For PKI distribution
