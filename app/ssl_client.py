@@ -13,7 +13,10 @@ context = ssl.create_default_context(ssl.Purpose.SERVER_AUTH, cafile=client_cert
 context.load_cert_chain(certfile=client_cert, keyfile=client_key)
 context.load_verify_locations(cafile=client_certs)
 
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+try:
+  s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+except (SSLError) as e:
+  print("SSL exception. {}".format(e.args[-1]))
 conn = context.wrap_socket(s, server_side=False, server_hostname=server_sni_hostname)
 conn.connect(server_address)
 print("SSL established. Peer: {}".format(conn.getpeercert()))
