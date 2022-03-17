@@ -22,6 +22,8 @@ generate_certificate_response = client.secrets.pki.generate_certificate(
 
 rr = generate_certificate_response
 
+print(rr)
+
 f = open("server.crt","w+")
 f.write(rr['data']['certificate'])
 f.close()
